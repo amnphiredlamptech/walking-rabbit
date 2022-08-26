@@ -71,7 +71,10 @@
           <img src="~/assets/images/ic-arrow-chevron-right.svg" />
         </div>
       </div>
-      <div class="beverage-category-container">
+      <div
+        v-if="stepCurrent === stepList[0]"
+        class="beverage-category-container"
+      >
         <span class="beverage-category">Beverage category</span>
         <div class="beverage-type-section">
           <button
@@ -124,6 +127,30 @@
           >
         </div>
         <div v-if="beverageData" class="beverage-footer-section">
+          <button class="button-cancel" @click="onClickCancelOrder()">
+            Cancel order
+          </button>
+          <button
+            :disabled="getIsDisabledConfirmOrder()"
+            :class="[
+              'button-confirm',
+              { disabled: getIsDisabledConfirmOrder() },
+            ]"
+            @click="onClickConfirmOrder()"
+          >
+            Confirm order
+          </button>
+        </div>
+      </div>
+      <div
+        v-if="stepCurrent === stepList[1]"
+        class="beverage-category-container"
+      >
+        <div class="beverage-input-money">
+          <span class="text24 white">Enter your money (฿)</span>
+          <input />
+        </div>
+        <div class="beverage-footer-section">
           <button class="button-cancel" @click="onClickCancelOrder()">
             Cancel order
           </button>
@@ -320,6 +347,9 @@ export default {
       ],
       beverageData: undefined,
       beverageAttrDataList: [],
+
+      stepCurrent: "order",
+      stepList: ["order", "payment", "waiting cooking", "order success"],
     };
   },
 
@@ -422,10 +452,12 @@ export default {
       return isDisable;
     },
     onClickCancelOrder() {
+      this.stepCurrent = this.stepList[0];
       this.beverageData = undefined;
     },
     onClickConfirmOrder() {
       console.log("this.beverageData", this.beverageData);
+      this.stepCurrent = this.stepList[1];
     },
   },
 };
@@ -653,6 +685,12 @@ export default {
   }
 }
 
+.beverage-input-money {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .text18 {
   font-family: "IBM Plex Sans Thai";
   font-weight: 400;
@@ -662,6 +700,21 @@ export default {
   }
   &.red {
     color: #b42816;
+  }
+}
+
+.text24 {
+  font-family: "IBM Plex Sans Thai";
+  font-weight: 400;
+  font-size: 24px;
+  &.bold {
+    font-weight: 700;
+  }
+  &.red {
+    color: #b42816;
+  }
+  &.white {
+    color: #ffffff;
   }
 }
 </style>
