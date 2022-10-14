@@ -1,10 +1,19 @@
 {
-  "name": "vue-hello-world-simple",
+  "name": "rl-hello-world-simple",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": ".dist/rl-hello-world-simple.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name rl-hello-world-simple ./src/install.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
