@@ -1,8 +1,4 @@
 {
-  "name": "rl-hello-world-simple-nuxt",
-  "version": "0.1.0",
-  "main": "./module.js",
-  "module": "./module.js",
   "private": false,
   "scripts": {
     "build": "nuxt build",
