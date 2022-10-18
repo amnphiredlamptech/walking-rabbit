@@ -1,14 +1,5 @@
 {
-  "name": "rl-hello-world-simple-nuxt",
-  "version": "0.1.0",
-  "main": "./.nuxt/dev/index.mjs",
   "private": false,
-  "files": [
-    "dev/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
