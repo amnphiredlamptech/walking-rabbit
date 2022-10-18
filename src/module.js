@@ -5,7 +5,7 @@ export default defineNuxtModule({
     // Usually  npm package name of your module
     name: 'rl-hello-world-simple-nuxt',
     // The key in `nuxt.config` that holds your module options
-    configKey: 'sample',
+    configKey: 'myModule',
     // Compatibility constraints
     compatibility: {
       // Semver version of supported nuxt versions
@@ -14,7 +14,7 @@ export default defineNuxtModule({
   },
   // Default configuration options for your module
   defaults: {
-    test: '2'
+    addPlugin: true
   },
   hooks: {},
   async setup(moduleOptions, nuxt) {

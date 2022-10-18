@@ -1,7 +1,7 @@
 import { NuxtModule } from '@nuxt/schema'
 declare module '@nuxt/schema' {
   interface NuxtConfig {
-    ["sample"]?: typeof import("./src/module.js").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["myModule"]?: typeof import("rl-hello-world-simple-nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
   }
   interface RuntimeConfig {
