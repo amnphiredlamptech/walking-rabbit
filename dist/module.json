@@ -1,5 +1,5 @@
 {
-  "name": "rl-hello-world-simple-nuxt",
+  "name": "my-module",
   "configKey": "myModule",
-  "compatibility": {}
+  "version": "1.0.0"
 }
