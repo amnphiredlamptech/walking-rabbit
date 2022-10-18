@@ -17,7 +17,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     addComponent({
       name: 'MyComponent',
-      filePath: resolve(fileURLToPath(new URL('./', import.meta.url)), 'components', 'app.vue')
+      filePath: '../src/pages'
     })
   }
 })
