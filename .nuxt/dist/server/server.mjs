@@ -1,1 +1,0 @@
-export { default } from "file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
