@@ -1,4 +1,5 @@
 {
+  "name": "rl-hello-world-simple-nuxt",
   "private": false,
   "scripts": {
     "build": "nuxt build",
