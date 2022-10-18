@@ -1,14 +1,19 @@
 {
   "name": "rl-hello-world-simple-nuxt",
   "private": false,
+  "main": "./dist/module.cjs",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare ./"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.11"
+  },
+  "dependencies": {
+    "@nuxt/module-builder": "^0.2.0"
   }
 }
