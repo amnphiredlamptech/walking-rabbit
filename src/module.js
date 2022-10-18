@@ -19,7 +19,7 @@ export default defineNuxtModule({
   hooks: {},
   async setup(moduleOptions, nuxt) {
     console.log('moduleOptions', moduleOptions);
-    console.log('nuxt', nuxt)
+    // console.log('nuxt', nuxt)
     // -- Add your module logic here --
   }
 })

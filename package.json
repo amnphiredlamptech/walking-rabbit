@@ -1,7 +1,11 @@
 {
   "name": "rl-hello-world-simple-nuxt",
-  "private": false,
+  "private": true,
   "main": "./dist/module.cjs",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
