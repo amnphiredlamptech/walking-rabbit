@@ -2,17 +2,8 @@
   "name": "my-module",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
-  },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "main": "./src/.output/server/index.mjs",
   "files": [
-    "dist",
     "src"
   ],
   "scripts": {
