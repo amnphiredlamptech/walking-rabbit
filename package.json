@@ -19,7 +19,7 @@
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev src",
     "dev:build": "nuxi build src",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare src"
+    "dev:prepare": "nuxt-module-build --stub"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.11"
