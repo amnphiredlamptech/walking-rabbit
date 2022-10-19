@@ -1,6 +1,7 @@
 <template>
   <div>
     Nuxt module playground!
+    <Counter />
   </div>
 </template>
 
