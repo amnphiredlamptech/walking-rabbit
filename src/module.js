@@ -2,11 +2,7 @@ import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { defineNuxtModule, addComponent } from '@nuxt/kit'
 
-export interface ModuleOptions {
-  addPlugin: boolean
-}
-
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule({
   meta: {
     name: 'my-module',
     configKey: 'myModule'
@@ -15,9 +11,9 @@ export default defineNuxtModule<ModuleOptions>({
     addPlugin: true
   },
   setup(options, nuxt) {
-    addComponent({
-      name: 'MyComponent',
-      filePath: 'my-module/src/pages/index.vue'
-    })
+    // addComponent({
+    //   name: 'MyComponent',
+    //   filePath: 'my-module/src/pages/index.vue'
+    // })
   }
 })

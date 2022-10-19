@@ -1,24 +1,24 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/node-fetch-native/dist/polyfill.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { Server } from 'http';
 import { tmpdir } from 'os';
 import { join } from 'path';
 import { mkdirSync } from 'fs';
 import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/std-env/dist/index.mjs';
-import { createRenderer } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { eventHandler, defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler, getQuery } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/h3/dist/index.mjs';
-import devalue from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/vue/server-renderer/index.mjs';
-import { parseURL, withQuery, joinURL } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/ufo/dist/index.mjs';
-import destr from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/scule/dist/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/ohmyfetch/dist/node.mjs';
-import { createRouter as createRouter$1 } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/radix3/dist/index.mjs';
-import { createCall, createFetch } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/hookable/dist/index.mjs';
-import { hash } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/ohash/dist/index.mjs';
-import { createStorage } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/unstorage/dist/drivers/fs.mjs';
+import { provider, isWindows } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/std-env/dist/index.mjs';
+import { createRenderer } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { eventHandler, defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler, getQuery } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/h3/dist/index.mjs';
+import devalue from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/@nuxt/devalue/dist/devalue.mjs';
+import { renderToString } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/vue/server-renderer/index.mjs';
+import { parseURL, withQuery, joinURL } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/ufo/dist/index.mjs';
+import destr from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/scule/dist/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/ohmyfetch/dist/node.mjs';
+import { createRouter as createRouter$1 } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/radix3/dist/index.mjs';
+import { createCall, createFetch } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/hookable/dist/index.mjs';
+import { hash } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/ohash/dist/index.mjs';
+import { createStorage } from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/unstorage/dist/drivers/fs.mjs';
 
 const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routes":{},"envPrefix":"NUXT_"},"public":{}};
 const ENV_PREFIX = "NITRO_";
@@ -353,7 +353,7 @@ const errorHandler = (async function errorhandler(error, event) {
   const isErrorPage = event.req.url?.startsWith("/__nuxt_error");
   let html = !isErrorPage ? await $fetch(withQuery("/__nuxt_error", errorObject)).catch(() => null) : null;
   if (!html) {
-    const { template } = await import('file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
+    const { template } = await import('file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
     {
       errorObject.description = errorObject.message;
     }
@@ -363,11 +363,11 @@ const errorHandler = (async function errorhandler(error, event) {
   event.res.end(html);
 });
 
-const _lazy_2fjcYd = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_dDiXgr = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_2fjcYd, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_2fjcYd, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_dDiXgr, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_dDiXgr, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
