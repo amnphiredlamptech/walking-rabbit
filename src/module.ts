@@ -1,6 +1,12 @@
-import { defineNuxtModule, addComponent } from '@nuxt/kit'
+import { resolve } from 'path'
+import { fileURLToPath } from 'url'
+import { defineNuxtModule, addPlugin } from '@nuxt/kit'
 
-export default defineNuxtModule({
+export interface ModuleOptions {
+  addPlugin: boolean
+}
+
+export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'my-module',
     configKey: 'myModule'
@@ -8,10 +14,12 @@ export default defineNuxtModule({
   defaults: {
     addPlugin: true
   },
-  setup(options, nuxt) {
-    addComponent({
-      name: 'MyComponent',
-      filePath: 'my-module/src/.output/server/index.mjs'
-    });
+  setup (options, nuxt) {
+    if (options.addPlugin) {
+      const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+      console.log('runtimeDir',runtimeDir)
+      nuxt.options.build.transpile.push(runtimeDir)
+      addPlugin(resolve(runtimeDir, 'plugin'))
+    }
   }
 })

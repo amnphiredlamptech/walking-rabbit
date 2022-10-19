@@ -1,7 +1,6 @@
 <template>
   <div>
-    <TestComponent/>
-    <NuxtWelcome />
+    Nuxt module playground!
   </div>
 </template>
 
