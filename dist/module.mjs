@@ -1,23 +1,6 @@
-import { resolve } from 'path';
-import { fileURLToPath } from 'url';
-import { defineNuxtModule, addPlugin } from '@nuxt/kit';
+import jiti from "file:///Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/node_modules/jiti/lib/index.js";
 
-const module = defineNuxtModule({
-  meta: {
-    name: "my-module",
-    configKey: "myModule"
-  },
-  defaults: {
-    addPlugin: true
-  },
-  setup(options, nuxt) {
-    if (options.addPlugin) {
-      const runtimeDir = fileURLToPath(new URL("./runtime", import.meta.url));
-      console.log("runtimeDir", runtimeDir);
-      nuxt.options.build.transpile.push(runtimeDir);
-      addPlugin(resolve(runtimeDir, "plugin"));
-    }
-  }
-});
+/** @type {import("/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/module")} */
+const _module = jiti(null, { interopDefault: true, esmResolve: true })("/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/module.ts");
 
-export { module as default };
+export default _module;
