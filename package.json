@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "./src/.output/server/index.mjs",
   "files": [
-    "src/.output"
+    "src"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",

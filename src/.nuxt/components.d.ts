@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
     'ServerPlaceholder': typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
     'NuxtLink': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'NuxtLoadingIndicator': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'MyComponent': typeof import("my-module/src/.output/server/index")['default']
     'LazyTestComponent': typeof import("../components/TestComponent.vue")['default']
     'LazyNuxtWelcome': typeof import("../../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
     'LazyNuxtLayout': typeof import("../../node_modules/nuxt/dist/app/components/layout")['default']
@@ -17,6 +18,7 @@ declare module '@vue/runtime-core' {
     'LazyServerPlaceholder': typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
     'LazyNuxtLink': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'LazyNuxtLoadingIndicator': typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'LazyMyComponent': typeof import("my-module/src/.output/server/index")['default']
   }
 }
 
@@ -28,6 +30,7 @@ export const ClientOnly: typeof import("../../node_modules/nuxt/dist/app/compone
 export const ServerPlaceholder: typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const NuxtLink: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+export const MyComponent: typeof import("my-module/src/.output/server/index")['default']
 export const LazyTestComponent: typeof import("../components/TestComponent.vue")['default']
 export const LazyNuxtWelcome: typeof import("../../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const LazyNuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/layout")['default']
@@ -36,5 +39,6 @@ export const LazyClientOnly: typeof import("../../node_modules/nuxt/dist/app/com
 export const LazyServerPlaceholder: typeof import("../../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const LazyNuxtLink: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const LazyNuxtLoadingIndicator: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+export const LazyMyComponent: typeof import("my-module/src/.output/server/index")['default']
 
 export const componentNames: string[]

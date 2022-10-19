@@ -1,5 +1,11 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import MyModule from './module'
 
 export default defineNuxtConfig({
-  ssr: false
+  modules: [
+    MyModule
+  ],
+  myModule: {
+    addPlugin: true
+  }
 })

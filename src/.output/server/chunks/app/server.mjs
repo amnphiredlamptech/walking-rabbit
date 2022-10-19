@@ -1,15 +1,65 @@
-import { getCurrentInstance, reactive, toRef, isRef, inject, defineComponent, computed, ref, h, resolveComponent, shallowRef, unref, watchEffect, markRaw, provide, Suspense, Transition, useSSRContext, mergeProps, defineAsyncComponent, onErrorCaptured, withCtx, createVNode, createApp } from "vue";
-import { $fetch } from "ohmyfetch";
-import { joinURL, hasProtocol, parseURL, isEqual } from "ufo";
-import { useRuntimeConfig as useRuntimeConfig$1 } from "#internal/nitro";
-import { createHooks } from "hookable";
-import { getContext, executeAsync } from "unctx";
-import { RouterView, createMemoryHistory, createRouter } from "vue-router";
-import "destr";
-import { createError as createError$1, sendRedirect } from "h3";
-import defu, { defuFn } from "defu";
-import { isFunction } from "@vue/shared";
-import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSuspense, ssrRenderComponent } from "vue/server-renderer";
+import { computed, defineComponent, inject, provide, h, Suspense, Transition, reactive, useSSRContext, isRef, getCurrentInstance, ref, resolveComponent, watchEffect, markRaw, mergeProps, shallowRef, createApp, toRef, defineAsyncComponent, onErrorCaptured, unref, withCtx, createVNode } from 'vue';
+import { $fetch } from 'ohmyfetch';
+import { joinURL, hasProtocol, isEqual, parseURL } from 'ufo';
+import { createHooks } from 'hookable';
+import { getContext, executeAsync } from 'unctx';
+import { RouterView, createMemoryHistory, createRouter } from 'vue-router';
+import { a as useRuntimeConfig$1, c as createError$1, s as sendRedirect } from '../nitro/node-server.mjs';
+import { isFunction } from '@vue/shared';
+import { ssrRenderAttrs, ssrRenderAttr, ssrInterpolate, ssrRenderSuspense, ssrRenderComponent } from 'vue/server-renderer';
+import 'node-fetch-native/polyfill';
+import 'http';
+import 'https';
+import 'destr';
+import 'radix3';
+import 'unenv/runtime/fetch/index';
+import 'scule';
+import 'ohash';
+import 'unstorage';
+import 'fs';
+import 'pathe';
+import 'url';
+
+function isObject(val) {
+  return val !== null && typeof val === "object";
+}
+function _defu(baseObj, defaults, namespace = ".", merger) {
+  if (!isObject(defaults)) {
+    return _defu(baseObj, {}, namespace, merger);
+  }
+  const obj = Object.assign({}, defaults);
+  for (const key in baseObj) {
+    if (key === "__proto__" || key === "constructor") {
+      continue;
+    }
+    const val = baseObj[key];
+    if (val === null || val === void 0) {
+      continue;
+    }
+    if (merger && merger(obj, key, val, namespace)) {
+      continue;
+    }
+    if (Array.isArray(val) && Array.isArray(obj[key])) {
+      obj[key] = val.concat(obj[key]);
+    } else if (isObject(val) && isObject(obj[key])) {
+      obj[key] = _defu(val, obj[key], (namespace ? `${namespace}.` : "") + key.toString(), merger);
+    } else {
+      obj[key] = val;
+    }
+  }
+  return obj;
+}
+function createDefu(merger) {
+  return (...args) => args.reduce((p, c) => _defu(p, c, "", merger), {});
+}
+const defu = createDefu();
+const defuFn = createDefu((obj, key, currentValue, _namespace) => {
+  if (typeof obj[key] !== "undefined" && typeof currentValue === "function") {
+    obj[key] = currentValue(obj[key]);
+    return true;
+  }
+});
+
 const appConfig = useRuntimeConfig$1().app;
 const baseURL = () => appConfig.baseURL;
 const buildAssetsDir = () => appConfig.buildAssetsDir;
@@ -1165,7 +1215,6 @@ _sfc_main$3.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/TestComponent.vue");
   return _sfc_setup$3 ? _sfc_setup$3(props, ctx) : void 0;
 };
-const welcome_vue_vue_type_style_index_0_scoped_65ab7657_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -1233,8 +1282,8 @@ const _routes = [
     file: "/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/pages/index.vue",
     children: [],
     meta,
-    alias: (meta == null ? void 0 : meta.alias) || [],
-    component: () => import("./_nuxt/index.0b9b78e1.js").then((m) => m.default || m)
+    alias: [],
+    component: () => import('./_nuxt/index.0b9b78e1.mjs').then((m) => m.default || m)
   }
 ];
 const configRouterOptions = {};
@@ -1383,7 +1432,7 @@ const _sfc_main$1 = {
   __name: "nuxt-root",
   __ssrInlineRender: true,
   setup(__props) {
-    const ErrorComponent = defineAsyncComponent(() => import("./_nuxt/error-component.e0e59901.js").then((r) => r.default || r));
+    const ErrorComponent = defineAsyncComponent(() => import('./_nuxt/error-component.e0e59901.mjs').then((r) => r.default || r));
     const nuxtApp = useNuxtApp();
     provide("_route", useRoute());
     nuxtApp.hooks.callHookWith((hooks) => hooks.map((hook) => hook()), "vue:setup");
@@ -1485,12 +1534,6 @@ const plugins = normalizePlugins(_plugins);
   };
 }
 const entry$1 = (ctx) => entry(ctx);
-export {
-  _export_sfc as _,
-  _sfc_main$3 as a,
-  __nuxt_component_1 as b,
-  __nuxt_component_0$1 as c,
-  entry$1 as default,
-  useHead as u
-};
+
+export { _export_sfc as _, _sfc_main$3 as a, __nuxt_component_1 as b, __nuxt_component_0$1 as c, entry$1 as default, useHead as u };
 //# sourceMappingURL=server.mjs.map
