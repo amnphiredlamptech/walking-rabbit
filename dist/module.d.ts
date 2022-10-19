@@ -1,0 +1,2 @@
+export * from "/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/module";
+export { default } from "/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/module";
