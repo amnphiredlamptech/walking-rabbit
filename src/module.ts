@@ -11,7 +11,7 @@ export default defineNuxtModule({
   setup(options, nuxt) {
     addComponent({
       name: 'MyComponent',
-      filePath: 'my-module/src/pages/index.vue'
+      filePath: 'my-module/src/.output/server/index.mjs'
     });
   }
 })
