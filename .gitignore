@@ -18,7 +18,7 @@ dist
 
 # Nuxt
 # .nuxt
-.output
+# .output
 .vercel_build_output
 .build-*
 .env

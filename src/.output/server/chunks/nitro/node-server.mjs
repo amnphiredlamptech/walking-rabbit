@@ -838,56 +838,56 @@ const assets = {
   "/_nuxt/entry.248589b8.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"11dd-wIkz2QF0i8lIGyHR0f8zQNZMmEY\"",
-    "mtime": "2022-10-19T06:52:05.232Z",
+    "mtime": "2022-10-19T07:32:53.968Z",
     "size": 4573,
     "path": "../public/_nuxt/entry.248589b8.css"
   },
   "/_nuxt/entry.792eda8b.js": {
     "type": "application/javascript",
     "etag": "\"1e431-lSQLTdlLR0PpZ5EEsjrQwjjLZGQ\"",
-    "mtime": "2022-10-19T06:52:05.232Z",
+    "mtime": "2022-10-19T07:32:53.968Z",
     "size": 123953,
     "path": "../public/_nuxt/entry.792eda8b.js"
   },
   "/_nuxt/error-404.d76d6f4d.js": {
     "type": "application/javascript",
     "etag": "\"8ad-CdPks6FaAHrFxgeAOm1xePpyt0s\"",
-    "mtime": "2022-10-19T06:52:05.232Z",
+    "mtime": "2022-10-19T07:32:53.968Z",
     "size": 2221,
     "path": "../public/_nuxt/error-404.d76d6f4d.js"
   },
   "/_nuxt/error-404.dfdebc1f.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"e2e-TySzBJMzcOOue3FcAGXOsPB/jtI\"",
-    "mtime": "2022-10-19T06:52:05.231Z",
+    "mtime": "2022-10-19T07:32:53.967Z",
     "size": 3630,
     "path": "../public/_nuxt/error-404.dfdebc1f.css"
   },
   "/_nuxt/error-500.23e7ea91.js": {
     "type": "application/javascript",
     "etag": "\"756-kkW/FMz2FclZ6o+L+XLw6vWoHwE\"",
-    "mtime": "2022-10-19T06:52:05.231Z",
+    "mtime": "2022-10-19T07:32:53.967Z",
     "size": 1878,
     "path": "../public/_nuxt/error-500.23e7ea91.js"
   },
   "/_nuxt/error-500.3e50ac36.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"79e-zW53+6jUfsJkZINkhx/9SNadPR8\"",
-    "mtime": "2022-10-19T06:52:05.231Z",
+    "mtime": "2022-10-19T07:32:53.967Z",
     "size": 1950,
     "path": "../public/_nuxt/error-500.3e50ac36.css"
   },
   "/_nuxt/error-component.de446eb4.js": {
     "type": "application/javascript",
     "etag": "\"465-2ikQZtlV+BwrxFH5HSQT+RyNhkw\"",
-    "mtime": "2022-10-19T06:52:05.231Z",
+    "mtime": "2022-10-19T07:32:53.967Z",
     "size": 1125,
     "path": "../public/_nuxt/error-component.de446eb4.js"
   },
   "/_nuxt/index.8ee09d19.js": {
     "type": "application/javascript",
     "etag": "\"2f21-Xr/+ej3R2kDDTaGcbNAOhqGjmuo\"",
-    "mtime": "2022-10-19T06:52:05.230Z",
+    "mtime": "2022-10-19T07:32:53.966Z",
     "size": 12065,
     "path": "../public/_nuxt/index.8ee09d19.js"
   }
