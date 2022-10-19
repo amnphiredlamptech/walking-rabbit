@@ -6,10 +6,11 @@ export default {
     "src": "../node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
-      "../virtual:nuxt:/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/.nuxt/error-component.mjs",
-      "../node_modules/nuxt/dist/app/entry.mjs-css"
+      "../virtual:nuxt:/Users/man/Desktop/workspace/microservice/vue-hello-world-simple-nuxt/src/.nuxt/error-component.mjs"
     ],
-    "css": []
+    "css": [
+      "entry.248589b8.css"
+    ]
   },
   "entry.248589b8.css": {
     "file": "entry.248589b8.css",
@@ -48,7 +49,9 @@ export default {
     "imports": [
       "../node_modules/nuxt/dist/app/entry.mjs"
     ],
-    "css": []
+    "css": [
+      "error-404.dfdebc1f.css"
+    ]
   },
   "error-404.dfdebc1f.css": {
     "file": "error-404.dfdebc1f.css",
@@ -63,7 +66,9 @@ export default {
     "imports": [
       "../node_modules/nuxt/dist/app/entry.mjs"
     ],
-    "css": []
+    "css": [
+      "error-500.3e50ac36.css"
+    ]
   },
   "error-500.3e50ac36.css": {
     "file": "error-500.3e50ac36.css",
@@ -74,20 +79,14 @@ export default {
     "file": "entry.248589b8.css",
     "src": "../node_modules/nuxt/dist/app/entry.css"
   },
-  "../node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
-    "resourceType": "style",
-    "file": "error-500.3e50ac36.css",
-    "src": "../node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
-  },
   "../node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
     "resourceType": "style",
     "file": "error-404.dfdebc1f.css",
     "src": "../node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
   },
-  "../node_modules/nuxt/dist/app/entry.mjs-css": {
-    "file": "",
-    "css": [
-      "entry.248589b8.css"
-    ]
+  "../node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
+    "resourceType": "style",
+    "file": "error-500.3e50ac36.css",
+    "src": "../node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
   }
 }
