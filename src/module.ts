@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addComponent } from '@nuxt/kit'
 
 export interface ModuleOptions {
   addPlugin: boolean
@@ -14,10 +14,14 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     addPlugin: true
   },
-  setup (options, nuxt) {
+  setup(options, nuxt) {
+    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+    console.log('runtimeDir', runtimeDir)
+    addComponent({
+      name: 'MyComponent',
+      filePath: resolve(runtimeDir, 'pages', 'index.vue')
+    })
     if (options.addPlugin) {
-      const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
-      console.log('runtimeDir',runtimeDir)
       nuxt.options.build.transpile.push(runtimeDir)
       addPlugin(resolve(runtimeDir, 'plugin'))
     }

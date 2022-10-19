@@ -13,14 +13,13 @@
   "types": "./dist/types.d.ts",
   "files": [
     "dist",
-    "src",
-    "playground"
+    "src"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
-    "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "dev": "nuxi dev src/runtime",
+    "dev:build": "nuxi build src/runtime",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare src/runtime"
   },
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.12"
