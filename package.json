@@ -13,7 +13,7 @@
   "types": "./dist/types.d.ts",
   "files": [
     "dist",
-    "playground"
+    "src"
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
