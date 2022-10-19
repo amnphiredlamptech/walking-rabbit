@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   imports: {
     autoImport: false
   },
+  components: false,
   modules: [],
   myModule: {
     addPlugin: true

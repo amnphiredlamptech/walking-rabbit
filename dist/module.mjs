@@ -12,7 +12,6 @@ const module = defineNuxtModule({
   },
   setup(options, nuxt) {
     const runtimeDir = fileURLToPath(new URL("./runtime", import.meta.url));
-    console.log("runtimeDir", runtimeDir);
     addComponent({
       name: "MyComponent",
       filePath: resolve(runtimeDir, "pages", "index.vue")
